@@ -2,7 +2,7 @@ name: Backend Blocking IO
 
 on:
   push:
-    branches: ["main", "*-dev"]
+    branches: ["pr5-blocking-*"]
     paths:
       - "backend/**"
       - ".github/workflows/backend-blocking-io-tests.yml"
