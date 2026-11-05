@@ -2638,6 +2638,8 @@ In the Web UI, the latest completed user turn can also be edited and rerun from 
 
 Web UI chat links percent-encode custom thread identifiers before placing them in route segments, so reserved URL characters such as `#` and `?` do not change which conversation is opened.
 
+The chat to-do list stays visible after an assistant run completes and when you reopen the conversation. When the run clears the list, it stays cleared after a reload.
+
 ### Chat Archive
 
 Deleting a chat from the sidebar requires confirmation showing its title. Deletion removes the conversation and its files and cannot be undone.

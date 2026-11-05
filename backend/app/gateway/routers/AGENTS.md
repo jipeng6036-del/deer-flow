@@ -103,6 +103,11 @@ multipart form. Form close is suppressed, so a close, cleanup, or warning
 failure cannot turn a successful install into a 500, replace an install
 error, or skip the discard. Coverage: `tests/test_skill_archive_upload_cleanup.py`.
 
+The first entry from `POST /api/threads/{thread_id}/history` carries the
+persisted `todos` list, including an explicit empty list. Skip malformed
+entries without string content, omit missing or non-list values, and keep
+older entries free of todos so the chat UI restores only the selected history head.
+
 State updates synchronize titles into thread metadata only for the root checkpoint
 namespace. Nonroot writes preserve the conversation title, branch-title sequence
 and activity timestamp. `tests/test_threads_router.py` checks metadata/search
